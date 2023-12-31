@@ -62,9 +62,9 @@ void flipp_pomodoro__destroy(FlippPomodoroState* state) {
 
 uint32_t flipp_pomodoro__current_stage_total_duration(FlippPomodoroState* state) {
     const int32_t stage_duration_seconds_map[] = {
-        [FlippPomodoroStageFocus] = 25 * TIME_SECONDS_IN_MINUTE,
-        [FlippPomodoroStageRest] = 5 * TIME_SECONDS_IN_MINUTE,
-        [FlippPomodoroStageLongBreak] = 30 * TIME_SECONDS_IN_MINUTE,
+        [FlippPomodoroStageFocus] = 50 * TIME_SECONDS_IN_MINUTE,
+        [FlippPomodoroStageRest] = 10 * TIME_SECONDS_IN_MINUTE,
+        [FlippPomodoroStageLongBreak] = 45 * TIME_SECONDS_IN_MINUTE,
     };
 
     return stage_duration_seconds_map[flipp_pomodoro__get_stage(state)];
